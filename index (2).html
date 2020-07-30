@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="papamodal.css">
+	 <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+	
+	<title>te llamamos</title>
+	
+</head>
+<body>
+       <div class="inicio">
+  	      <div class="button">
+  		  <button><a href="index.html"class="btn-inicio">Volver al Inicio</button></a>
+  		
+  	      </div>
+      </div>
+<div class="container">
+	<div class="header">
+		<header>
+		<h1 id="text"></h1>
+		<img src="llamada.jpg" alt="chica hablando por telefono">
+	    </header>
+	</div>
+	<div class="main-menu">
+		 <div class="form">
+		   <form action="process.php" method="POST" id="myForm">
+			Nombre y Apellidos:<br><input id="fname" type="text" name="nombre" required="required"><br>
+			Email:<br><input type="email" name="email" required="required"><br>
+			Teléfono:<br><input type="number" name="telefono" required="required">
+		   </form>
+		</div>
+    </div>
+    <div class="btn-container">
+     <button onclick="validateForm();"class="btn-send">Enviar</button>
+    </div>
+</div>
+    <div class="footer">
+    	<footer>
+    	  <p class="copyright">
+            Copyright &copy; 2020, eirewebdesign.ie - All Rights Reserved
+          </p>
+          <div class="social-list">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+    	</footer>
+    </div>
+	
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var x=0;
+	var textEffect="Te llamamos!!";
+	var container=document.getElementById("text");
+	function animate(){
+		if(x<textEffect.length){
+			container.innerHTML+=textEffect.charAt(x);x++;
+			setTimeout(animate,220);
+		}
+	}
+	animate();
+	
+	
+	function msg(){
+		alert("gracias,uno de nuestros agentes se pondra en contacto con usted");
+	}
+	function validateForm(){
+		var x=document.forms["myForm"]["fname"].value;
+		if(x==""){
+			alert("por favor introduzca su informacion");
+			return false;
+		}else{
+			alert("gracias estaremos en contacto en breve")
+		}
+	}
+
+</script>
+</body>
+</html>
